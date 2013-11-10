@@ -1,3 +1,15 @@
+Branches:
+  - master: old SDL version 1.2.7 made compilable on recent machines
+  - allow_alt-tab: minimise the window on alt-tab
+    (more info: http://www.ftlgame.com/forum/viewtopic.php?f=9&t=3762)
+
+Compile & install:
+  ./configure --disable-threads --disable-cdrom --disable-audio --disable-fbcon
+  make
+  cp src/.libs/libSDL-1.2.so.0 <DESTINATION>
+
+Original README contents below:
+---
 
                          Simple DirectMedia Layer
 
