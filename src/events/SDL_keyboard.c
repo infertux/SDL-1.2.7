@@ -391,6 +391,15 @@ int SDL_PrivateKeyboard(Uint8 state, SDL_keysym *keysym)
 printf("The '%s' key has been %s\n", SDL_GetKeyName(keysym->sym), 
 				state == SDL_PRESSED ? "pressed" : "released");
 #endif
+
+	/* Iconify/Minimise the window
+	   The alt-tab event will not be sent to the SDL application */
+	if( keysym->sym == SDLK_TAB && state == SDL_PRESSED
+		&& (SDL_ModState & KMOD_LALT) ) {
+		SDL_WM_IconifyWindow();
+		return(0);
+	}
+
 	/* Set up the keysym */
 	modstate = (Uint16)SDL_ModState;
 
