@@ -1,0 +1,13 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:46 2001//
+/Makefile.am/1.1.1.1/Thu Apr 26 16:45:46 2001//
+/SDL_lowvideo.h/1.6/Tue Feb 24 06:40:26 2004//
+/SDL_macevents.c/1.10/Tue Feb 24 06:40:26 2004//
+/SDL_macevents_c.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_macgl.c/1.9/Tue Feb 24 06:40:26 2004//
+/SDL_macgl_c.h/1.6/Tue Feb 24 06:40:26 2004//
+/SDL_mackeys.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_macmouse.c/1.6/Tue Feb 24 06:40:26 2004//
+/SDL_macmouse_c.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_macwm.c/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_macwm_c.h/1.5/Tue Feb 24 06:40:26 2004//
+D

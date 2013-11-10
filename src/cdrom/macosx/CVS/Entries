@@ -1,0 +1,12 @@
+/.cvsignore/1.1/Sat Jun 28 17:02:23 2003//
+/AudioFilePlayer.cpp/1.4/Tue Feb 24 06:40:23 2004//
+/AudioFilePlayer.h/1.4/Tue Feb 24 06:40:23 2004//
+/AudioFileReaderThread.cpp/1.4/Tue Feb 24 06:40:23 2004//
+/CAGuard.cpp/1.2/Tue Feb 24 06:40:23 2004//
+/CAGuard.h/1.2/Tue Feb 24 06:40:23 2004//
+/CDPlayer.cpp/1.4/Tue Feb 24 06:40:23 2004//
+/CDPlayer.h/1.5/Tue Feb 24 06:40:23 2004//
+/SDL_syscdrom.c/1.3/Tue Feb 24 06:40:23 2004//
+/SDL_syscdrom_c.h/1.3/Tue Feb 24 06:40:23 2004//
+/Makefile.am/1.3/Tue Mar  2 08:29:52 2004//
+D

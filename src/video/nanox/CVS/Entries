@@ -1,0 +1,15 @@
+/.cvsignore/1.1/Sun May 27 00:22:24 2001//
+/Makefile.am/1.1/Fri May 11 01:13:35 2001//
+/SDL_nxmouse_c.h/1.1/Fri May 11 01:13:35 2001//
+/SDL_nxevents.c/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_nxevents_c.h/1.4/Tue Feb 24 06:40:26 2004//
+/SDL_nximage.c/1.8/Tue Feb 24 06:40:26 2004//
+/SDL_nximage_c.h/1.4/Tue Feb 24 06:40:26 2004//
+/SDL_nxmodes.c/1.4/Tue Feb 24 06:40:26 2004//
+/SDL_nxmodes_c.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_nxmouse.c/1.4/Tue Feb 24 06:40:26 2004//
+/SDL_nxvideo.c/1.7/Tue Feb 24 06:40:26 2004//
+/SDL_nxvideo.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_nxwm.c/1.4/Tue Feb 24 06:40:26 2004//
+/SDL_nxwm_c.h/1.4/Tue Feb 24 06:40:26 2004//
+D

@@ -1,0 +1,79 @@
+***************
+*** 131,136 ****
+      current_grab_mode = SDL_GRAB_OFF;
+      in_foreground     = YES;
+      
+      return 0;
+  }
+  
+--- 131,139 ----
+      current_grab_mode = SDL_GRAB_OFF;
+      in_foreground     = YES;
+      
++     /* register for sleep notifications so wake from sleep generates SDL_VIDEOEXPOSE */
++     QZ_RegisterForSleepNotifications (this);
++     
+      return 0;
+  }
+  
+***************
+*** 394,406 ****
+              QZ_TearDownOpenGL (this);
+      }
+  
+-     /* Restore gamma settings */
+-     CGDisplayRestoreColorSyncSettings ();
+- 
+-     /* Ensure the cursor will be visible and working when we quit */
+-     CGDisplayShowCursor (display_id);
+-     CGAssociateMouseAndMouseCursorPosition (1);
+- 
+      /* Signal successful teardown */
+      video_set = SDL_FALSE;
+  }
+--- 397,402 ----
+              QZ_TearDownOpenGL (this);
+      }
+  
+      /* Signal successful teardown */
+      video_set = SDL_FALSE;
+  }
+***************
+*** 573,579 ****
+              return NULL;
+          }
+      
+-         [ qz_window setReleasedWhenClosed:YES ];
+          QZ_SetCaption(this, this->wm_title, this->wm_icon);
+          [ qz_window setAcceptsMouseMovedEvents:YES ];
+          [ qz_window setViewsNeedDisplay:NO ];
+--- 569,575 ----
+              return NULL;
+          }
+      
++         //[ qz_window setReleasedWhenClosed:YES ];
+          QZ_SetCaption(this, this->wm_title, this->wm_icon);
+          [ qz_window setAcceptsMouseMovedEvents:YES ];
+          [ qz_window setViewsNeedDisplay:NO ];
+***************
+*** 1058,1063 ****
+  
+  static void QZ_VideoQuit (_THIS) {
+  
+      QZ_UnsetVideoMode (this);
+      CGPaletteRelease (palette);
+  }
+--- 1054,1066 ----
+  
+  static void QZ_VideoQuit (_THIS) {
+  
++     /* Restore gamma settings */
++     CGDisplayRestoreColorSyncSettings ();
++ 
++     /* Ensure the cursor will be visible and working when we quit */
++     CGDisplayShowCursor (display_id);
++     CGAssociateMouseAndMouseCursorPosition (1);
++     
+      QZ_UnsetVideoMode (this);
+      CGPaletteRelease (palette);
+  }

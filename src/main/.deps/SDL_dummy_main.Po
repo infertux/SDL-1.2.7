@@ -1,0 +1,4 @@
+SDL_dummy_main.o SDL_dummy_main.o: dummy/SDL_dummy_main.c \
+  ../../include/SDL_main.h
+
+../../include/SDL_main.h:

@@ -1,0 +1,62 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/SDL_glfuncs.h/1.1.1.1/Thu Apr 26 16:45:45 2001//
+D/XFree86////
+D/aalib////
+D/ataricommon////
+D/bwindow////
+D/cybergfx////
+D/dga////
+D/directfb////
+D/dummy////
+D/epoc////
+D/fbcon////
+D/gem////
+D/ggi////
+D/maccommon////
+D/macdsp////
+D/macrom////
+D/nanox////
+D/photon////
+D/ps2gs////
+D/qtopia////
+D/quartz////
+D/svga////
+D/vgl////
+D/wincommon////
+D/windib////
+D/windx5////
+D/x11////
+D/xbios////
+D/picogui////
+D/dc////
+D/riscos////
+/Makefile.am/1.16/Fri Oct  3 18:23:25 2003//
+/mmx.h/1.2/Sat Jan  3 03:36:10 2004//
+/SDL_RLEaccel.c/1.8/Tue Feb 24 06:40:24 2004//
+/SDL_RLEaccel_c.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_blit.c/1.10/Tue Feb 24 06:40:24 2004//
+/SDL_blit.h/1.10/Tue Feb 24 06:40:24 2004//
+/SDL_blit_0.c/1.6/Tue Feb 24 06:40:24 2004//
+/SDL_blit_1.c/1.6/Tue Feb 24 06:40:24 2004//
+/SDL_blit_A.c/1.8/Tue Feb 24 06:40:24 2004//
+/SDL_blit_N.c/1.9/Tue Feb 24 06:40:24 2004//
+/SDL_bmp.c/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_cursor.c/1.9/Tue Feb 24 06:40:24 2004//
+/SDL_cursor_c.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_gamma.c/1.7/Tue Feb 24 06:40:24 2004//
+/SDL_leaks.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_memops.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_pixels.c/1.11/Tue Feb 24 06:40:24 2004//
+/SDL_pixels_c.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_stretch.c/1.8/Tue Feb 24 06:40:24 2004//
+/SDL_stretch_c.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_surface.c/1.17/Tue Feb 24 06:40:24 2004//
+/SDL_sysvideo.h/1.23/Tue Feb 24 06:40:24 2004//
+/SDL_yuv.c/1.8/Tue Feb 24 06:40:24 2004//
+/SDL_yuv_mmx.c/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_yuv_sw.c/1.9/Tue Feb 24 06:40:24 2004//
+/SDL_yuv_sw_c.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_yuvfuncs.h/1.5/Tue Feb 24 06:40:24 2004//
+/blank_cursor.h/1.5/Tue Feb 24 06:40:24 2004//
+/default_cursor.h/1.6/Tue Feb 24 06:40:24 2004//
+/SDL_video.c/1.44/Result of merge//

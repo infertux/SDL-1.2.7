@@ -1,0 +1,24 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/Makefile.am/1.2/Tue Jul 31 20:08:51 2001//
+/SDL_fbkeys.h/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/matrox_regs.h/1.1.1.1/Thu Apr 26 16:45:46 2001//
+/riva_mmio.h/1.1/Tue Jul 31 20:08:51 2001//
+/3dfx_mmio.h/1.5/Tue Feb 24 06:40:26 2004//
+/3dfx_regs.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fb3dfx.c/1.7/Tue Feb 24 06:40:26 2004//
+/SDL_fb3dfx.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbelo.c/1.7/Tue Feb 24 06:40:26 2004//
+/SDL_fbelo.h/1.6/Tue Feb 24 06:40:26 2004//
+/SDL_fbevents.c/1.13/Tue Feb 24 06:40:26 2004//
+/SDL_fbevents_c.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbmatrox.c/1.8/Tue Feb 24 06:40:26 2004//
+/SDL_fbmatrox.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbmouse.c/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbmouse_c.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbriva.c/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbriva.h/1.5/Tue Feb 24 06:40:26 2004//
+/SDL_fbvideo.c/1.11/Tue Feb 24 06:40:26 2004//
+/SDL_fbvideo.h/1.6/Tue Feb 24 06:40:26 2004//
+/matrox_mmio.h/1.5/Tue Feb 24 06:40:26 2004//
+/riva_regs.h/1.4/Tue Feb 24 06:40:26 2004//
+D

@@ -1,0 +1,15 @@
+/Makefile.am/1.1/Thu May 29 04:44:13 2003//
+/.cvsignore/1.1/Sat Aug  9 18:22:16 2003//
+/SDL_riscosFullScreenVideo.c/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscosevents.c/1.4/Tue Feb 24 06:40:27 2004//
+/SDL_riscosevents_c.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscosmouse.c/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscosmouse_c.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscossprite.c/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscostask.c/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscostask.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_riscosvideo.c/1.3/Tue Feb 24 06:40:27 2004//
+/SDL_riscosvideo.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_wimppoll.c/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_wimpvideo.c/1.3/Tue Feb 24 06:40:27 2004//
+D

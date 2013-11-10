@@ -1,0 +1,212 @@
+***************
+*** 71,76 ****
+  /* This is the rect EnumModes2 uses */
+  struct DX5EnumRect {
+  	SDL_Rect r;
+  	struct DX5EnumRect* next;
+  };
+  static struct DX5EnumRect *enumlists[NUM_MODELISTS];
+--- 71,77 ----
+  /* This is the rect EnumModes2 uses */
+  struct DX5EnumRect {
+  	SDL_Rect r;
++ 	int refreshRate;
+  	struct DX5EnumRect* next;
+  };
+  static struct DX5EnumRect *enumlists[NUM_MODELISTS];
+***************
+*** 666,671 ****
+  				SDL_OutOfMemory();
+  				return(DDENUMRET_CANCEL);
+  			}
+  			enumrect->r.x = 0;
+  			enumrect->r.y = 0;
+  			enumrect->r.w = (Uint16)desc->dwWidth;
+--- 667,673 ----
+  				SDL_OutOfMemory();
+  				return(DDENUMRET_CANCEL);
+  			}
++ 			enumrect->refreshRate = desc->dwRefreshRate;
+  			enumrect->r.x = 0;
+  			enumrect->r.y = 0;
+  			enumrect->r.w = (Uint16)desc->dwWidth;
+***************
+*** 675,681 ****
+  			break;
+  	}
+  
+- 
+  	return(DDENUMRET_OK);
+  }
+  
+--- 677,682 ----
+  			break;
+  	}
+  
+  	return(DDENUMRET_OK);
+  }
+  
+***************
+*** 867,872 ****
+  	LPDIRECTDRAW ddraw;
+  	int i, j;
+  	HDC hdc;
+  
+  	/* Intialize everything */
+  	ddraw2 = NULL;
+--- 868,874 ----
+  	LPDIRECTDRAW ddraw;
+  	int i, j;
+  	HDC hdc;
++ 	int lastWidth, lastHeight;
+  
+  	/* Intialize everything */
+  	ddraw2 = NULL;
+***************
+*** 912,918 ****
+  	for ( i=0; i<NUM_MODELISTS; ++i )
+  		enumlists[i] = NULL;
+  
+- 	result = IDirectDraw2_EnumDisplayModes(ddraw2,0,NULL,this,EnumModes2);
+  	if ( result != DD_OK ) {
+  		SetDDerror("DirectDraw2::EnumDisplayModes", result);
+  		return(-1);
+--- 914,920 ----
+  	for ( i=0; i<NUM_MODELISTS; ++i )
+  		enumlists[i] = NULL;
+  
++ 	result = IDirectDraw2_EnumDisplayModes(ddraw2,DDEDM_REFRESHRATES,NULL,this,EnumModes2);
+  	if ( result != DD_OK ) {
+  		SetDDerror("DirectDraw2::EnumDisplayModes", result);
+  		return(-1);
+***************
+*** 925,932 ****
+  			SDL_OutOfMemory();
+  			return(-1);
+  		}
+  		for ( j = 0, rect = enumlists[i]; rect; ++j, rect = rect->next ) {
+- 			SDL_modelist[i][j]=(SDL_Rect *)rect;
+  		}
+  		SDL_modelist[i][j] = NULL;
+  	}
+--- 927,943 ----
+  			SDL_OutOfMemory();
+  			return(-1);
+  		}
++ 		lastWidth = 0;
++ 		lastHeight = 0;
+  		for ( j = 0, rect = enumlists[i]; rect; ++j, rect = rect->next ) {
++ 			if( (lastWidth != rect->r.w) || (lastHeight != rect->r.h))
++ 			{
++ 				lastWidth = rect->r.w;
++ 				lastHeight = rect->r.h;
++ 				
++ 				SDL_modelist[i][j]=(SDL_Rect *)rect;
++ 			}
++ //			printf("%dx%dx%d %d Hz\n", lastWidth, lastHeight,i, rect->refreshRate);
+  		}
+  		SDL_modelist[i][j] = NULL;
+  	}
+***************
+*** 990,995 ****
+  	LPDIRECTDRAWSURFACE3 dd_surface3;
+  	BOOL was_visible;
+  
+  #ifdef DDRAW_DEBUG
+   fprintf(stderr, "Setting %dx%dx%d video mode\n", width, height, bpp);
+  #endif
+--- 1001,1010 ----
+  	LPDIRECTDRAWSURFACE3 dd_surface3;
+  	BOOL was_visible;
+  
++ 	struct DX5EnumRect *rect;
++ 	int maxRefreshRate;
++ 	int j;
++ 
+  #ifdef DDRAW_DEBUG
+   fprintf(stderr, "Setting %dx%dx%d video mode\n", width, height, bpp);
+  #endif
+***************
+*** 1207,1219 ****
+  			SetForegroundWindow(SDL_Window);
+  			SDL_Delay(100);
+  		}
+- 		result = IDirectDraw2_SetDisplayMode(ddraw2, width, height,
+  								bpp, 0, 0);
+- 		if ( result != DD_OK ) {
+- 			/* We couldn't set fullscreen mode, try window */
+- 			return(DX5_SetVideoMode(this, current,
+- 				width, height, bpp, flags & ~SDL_FULLSCREEN)); 
+- 		}
+  		DX5_DInputReset(this, 1);
+  	} else {
+  		DX5_DInputReset(this, 0);
+--- 1222,1258 ----
+  			SetForegroundWindow(SDL_Window);
+  			SDL_Delay(100);
+  		}
++ 
++         /* find maximum monitor refresh rate for this resolution */
++ 		/* Dmitry Yakimov ftech@tula.net */
++ 		maxRefreshRate = 0; // system default
++ 
++ 		for ( j = 0, rect = enumlists[bpp / 8 - 1]; rect; ++j, rect = rect->next )
++ 			if( (width == rect->r.w) && (height == rect->r.h))
++ 			{
++ //				printf("%d %d\n", enumlists[bpp / 8 - 1], rect->refreshRate);
++ 				if( rect->refreshRate > maxRefreshRate )
++ 					maxRefreshRate = rect->refreshRate;
++ 			}
++ 
++ 		/* sometimes user has got wrong monitor driver, so it is better not to
++ 		   choose the very last frequency */
++ 		if( maxRefreshRate > 85 ) maxRefreshRate = 85;
++ 
++ //		printf("refresh rate = %d Hz\n", maxRefreshRate);
++ 
++ 		result = IDirectDraw2_SetDisplayMode(ddraw2, width, height,	bpp, maxRefreshRate, 0);
++         if ( result != DD_OK ) {
++ 			result = IDirectDraw2_SetDisplayMode(ddraw2, width, height,
+  								bpp, 0, 0);
++ 			if ( result != DD_OK ) {
++ 				/* We couldn't set fullscreen mode, try window */
++ 				return(DX5_SetVideoMode(this, current,
++ 					width, height, bpp, flags & ~SDL_FULLSCREEN)); 
++ 				}
++ 			}
++ 
++ 		
+  		DX5_DInputReset(this, 1);
+  	} else {
+  		DX5_DInputReset(this, 0);
+***************
+*** 1953,1963 ****
+  	LPDIRECTDRAWSURFACE3 dd_surface;
+  
+  	dd_surface = surface->hwdata->dd_surface;
+- 	result = IDirectDrawSurface3_Flip(dd_surface, NULL, 0);
+  	if ( result == DDERR_SURFACELOST ) {
+  		result = IDirectDrawSurface3_Restore(
+  						surface->hwdata->dd_surface);
+- 		result = IDirectDrawSurface3_Flip(dd_surface, NULL, 0);
+  	}
+  	if ( result != DD_OK ) {
+  		SetDDerror("DirectDrawSurface3::Flip", result);
+--- 1992,2008 ----
+  	LPDIRECTDRAWSURFACE3 dd_surface;
+  
+  	dd_surface = surface->hwdata->dd_surface;
++ 
++ 	// to prevent big slowdown on fast computers, wait here instead of driver ring 0 code
++ 	// Dmitry Yakimov (ftech@tula.net)
++ 	while(IDirectDrawSurface3_GetFlipStatus(dd_surface, DDGBS_ISBLTDONE) == DDERR_WASSTILLDRAWING);
++ 
++ 	result = IDirectDrawSurface3_Flip(dd_surface, NULL, DDFLIP_WAIT);
+  	if ( result == DDERR_SURFACELOST ) {
+  		result = IDirectDrawSurface3_Restore(
+  						surface->hwdata->dd_surface);
++ 		while(IDirectDrawSurface3_GetFlipStatus(dd_surface, DDGBS_ISBLTDONE) == DDERR_WASSTILLDRAWING);
++ 		result = IDirectDrawSurface3_Flip(dd_surface, NULL, DDFLIP_WAIT);
+  	}
+  	if ( result != DD_OK ) {
+  		SetDDerror("DirectDrawSurface3::Flip", result);

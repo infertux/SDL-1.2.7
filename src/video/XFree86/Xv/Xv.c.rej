@@ -1,0 +1,16 @@
+***************
+*** 978,983 ****
+  
+     UnlockDisplay(dpy);
+     SyncHandle();
+  
+     return (Success);
+   }
+--- 978,984 ----
+  
+     UnlockDisplay(dpy);
+     SyncHandle();
++   Xfree(buffer);
+  
+     return (Success);
+   }

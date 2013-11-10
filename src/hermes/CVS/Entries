@@ -1,0 +1,12 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/COPYING.LIB/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/HeadMMX.h/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/HeadX86.h/1.2/Sat May 18 11:30:38 2002//
+/README/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/mmx_main.asm/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/mmxp2_32.asm/1.2/Fri Mar  1 18:01:16 2002//
+/x86_main.asm/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/x86p_16.asm/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/x86p_32.asm/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/Makefile.am/1.4/Wed Nov  5 20:59:02 2003//
+D

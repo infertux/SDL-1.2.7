@@ -1,0 +1,15 @@
+/.cvsignore/1.1/Sun May 19 20:06:01 2002//
+/SDL_QPEApp.h/1.1/Sun May 19 20:06:01 2002//
+/Makefile.am/1.2/Wed May 29 22:12:20 2002//
+/SDL_QPEApp.cc/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_QWin.cc/1.5/Tue Feb 24 06:40:27 2004//
+/SDL_QWin.h/1.5/Tue Feb 24 06:40:27 2004//
+/SDL_lowvideo.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_sysevents.cc/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_sysevents_c.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_sysmouse.cc/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_sysmouse_c.h/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_sysvideo.cc/1.5/Tue Feb 24 06:40:27 2004//
+/SDL_syswm.cc/1.2/Tue Feb 24 06:40:27 2004//
+/SDL_syswm_c.h/1.2/Tue Feb 24 06:40:27 2004//
+D

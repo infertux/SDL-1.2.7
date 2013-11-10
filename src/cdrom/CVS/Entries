@@ -1,0 +1,18 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:44 2001//
+D/aix////
+D/beos////
+D/bsdi////
+D/dummy////
+D/freebsd////
+D/linux////
+D/macos////
+D/openbsd////
+D/qnx////
+D/win32////
+D/dc////
+D/macosx////
+D/osf////
+D/mint////
+/Makefile.am/1.9/Wed Nov  5 20:59:02 2003//
+/SDL_cdrom.c/1.5/Tue Feb 24 06:40:23 2004//
+/SDL_syscdrom.h/1.5/Tue Feb 24 06:40:23 2004//

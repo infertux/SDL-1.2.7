@@ -1,0 +1,15 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:45 2001//
+/Makefile.am/1.2/Sat Jan  3 03:36:10 2004//
+/SDL_BView.h/1.7/Tue Feb 24 06:40:25 2004//
+/SDL_BWin.h/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_lowvideo.h/1.6/Tue Feb 24 06:40:25 2004//
+/SDL_sysevents.cc/1.6/Tue Feb 24 06:40:25 2004//
+/SDL_sysevents_c.h/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_sysmouse.cc/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_sysmouse_c.h/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_sysvideo.cc/1.9/Tue Feb 24 06:40:25 2004//
+/SDL_syswm.cc/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_syswm_c.h/1.5/Tue Feb 24 06:40:25 2004//
+/SDL_sysyuv.cc/1.2/Tue Feb 24 06:40:25 2004//
+/SDL_sysyuv.h/1.2/Tue Feb 24 06:40:25 2004//
+D

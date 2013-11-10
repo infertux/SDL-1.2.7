@@ -1,0 +1,15 @@
+D/amigaos////
+D/beos////
+D/bsdi////
+D/epoc////
+D/generic////
+D/irix////
+D/linux////
+D/pth////
+D/win32////
+/.cvsignore/1.3/Fri Jul 26 06:02:34 2002//
+D/dc////
+/Makefile.am/1.7/Sat Jan  3 03:36:10 2004//
+/SDL_systhread.h/1.5/Tue Feb 24 06:40:24 2004//
+/SDL_thread.c/1.8/Tue Feb 24 06:40:24 2004//
+/SDL_thread_c.h/1.5/Tue Feb 24 06:40:24 2004//

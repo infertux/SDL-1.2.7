@@ -1,0 +1,16 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:45 2001//
+D/amigaos////
+D/beos////
+D/bsd////
+D/darwin////
+D/dummy////
+D/linux////
+D/macos////
+D/mint////
+D/win32////
+D/dc////
+/Makefile.am/1.7/Mon Jun 16 06:06:15 2003//
+D/riscos////
+/SDL_joystick.c/1.6/Tue Feb 24 06:40:23 2004//
+/SDL_joystick_c.h/1.5/Tue Feb 24 06:40:23 2004//
+/SDL_sysjoystick.h/1.5/Tue Feb 24 06:40:23 2004//

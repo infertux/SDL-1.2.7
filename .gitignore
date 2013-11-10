@@ -1,0 +1,19 @@
+# make and build files
+*.o
+*.a
+*.la
+*.lo
+*.Plo
+
+# machine-dependant files
+Makefile
+Makefile.in
+SDL.qpg
+SDL.spec
+aclocal.m4
+autom4te*
+config.log
+config.status
+depcomp
+libtool
+sdl-config

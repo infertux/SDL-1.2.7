@@ -1,0 +1,21 @@
+/.cvsignore/1.1.1.1/Thu Apr 26 16:45:44 2001//
+D/audio////
+D/cdrom////
+D/endian////
+D/events////
+D/file////
+D/hermes////
+D/joystick////
+D/main////
+D/thread////
+D/timer////
+D/video////
+/Makefile.am/1.6/Sat Jan  3 03:36:09 2004//
+D/cpuinfo////
+/SDL.c/1.9/Tue Feb 24 06:40:22 2004//
+/SDL_error.c/1.5/Tue Feb 24 06:40:22 2004//
+/SDL_error_c.h/1.5/Tue Feb 24 06:40:22 2004//
+/SDL_fatal.h/1.5/Tue Feb 24 06:40:22 2004//
+/SDL_getenv.c/1.5/Tue Feb 24 06:40:22 2004//
+/SDL_loadso.c/1.9/Tue Feb 24 06:40:22 2004//
+/SDL_fatal.c/1.8/Tue Mar  2 08:29:52 2004//
